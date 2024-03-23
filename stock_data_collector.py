@@ -49,11 +49,11 @@ while user_choice != 2:
 
     #Taking input for time period of data required and validation for the input
     print("Enter how many days worth of data you wish to see? If you want to see all days, enter 'max' or enter the number of days.")
-    while time != 'max' or mod(int(time), 1) == 0:
+    while time != 'max' or int(time) % 1 != 0:
       time = input()
       if time == 'max':
         break
-      elif type(time) == str:
+      elif int(time) % 1 == 0:
         time = time + 'd'
         break
       else:
